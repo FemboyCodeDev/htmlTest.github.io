@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raw JS Test</title>
+</head>
+<body>
+
+    <h1>JavaScript Functionality Test</h1>
+    <p>This page tests if scripts are running. :3</p>
+
+    <hr>
+
+    <button onclick="alert('JS is working! Good job, Alex!')">
+        Test Alert
+    </button>
+
+    <br><br>
+
+    <button id="textBtn">Test Text Change</button>
+    <p id="status">Waiting for click...</p>
+
+    <br>
+
+    <button id="mathBtn">Test Math (2 + 2)</button>
+    <div id="mathResult"></div>
+
+    <script>
+        // Test 2 Logic: Changing text on the page
+        document.getElementById('textBtn').onclick = function() {
+            document.getElementById('status').innerHTML = "<b>Success!</b> JS changed this text. ^w^";
+        };
+
+        // Test 3 Logic: Basic calculation
+        document.getElementById('mathBtn').onclick = function() {
+            const sum = 2 + 2;
+            document.getElementById('mathResult').innerText = "Result: " + sum;
+            console.log("Math test passed!");
+        };
+    </script>
+
+</body>
+</html>
